@@ -52,31 +52,31 @@
   </div>
   <div class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://shaoxiongyao.github.io/">
+      <!-- <a class="navbar-item" href="https://shaoxiongyao.github.io/">
       <span class="icon">
           <i class="fas fa-home"></i>
       </span>
-      </a>
+      </a> -->
 
-      <!-- <div class="navbar-item has-dropdown is-hoverable">
+      <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">
-          More Research
+          More research
         </a>
         <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
+          <!-- <a class="navbar-item" href="https://psc0628.github.io/">
+            Sicong Pan
           </a>
           <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
+            Shaoxiong Yao
+          </a> -->
+          <a class="navbar-item" href="https://motion.cs.illinois.edu/">
+            IML UIUC
           </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
+          <a class="navbar-item" href="https://www.hrl.uni-bonn.de/">
+            HRL Bonn
           </a>
         </div>
-      </div> -->
+      </div>
     </div>
 
   </div>
@@ -192,7 +192,8 @@
   </div>
 </section>
 
-<section class="hero teaser">
+<!--First version using multi-fruit video as teasor-->
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video id="teaser" autoplay muted loop playsinline height="100%">
@@ -205,8 +206,119 @@
       </h2>
     </div>
   </div>
+</section> -->
+
+<section class="hero teaser" style="width: 40%; margin: 0 auto;">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="media-content">
+        <figure class="image">
+          <img src="./static/images/star_figure_v3.png" alt="Fruit shape and pose estimation with leaf manipulation">
+          <figcaption class="subtitle has-text-centered">
+            We propose an active fruit shape and pose estimation method that physically manipulates occluding leaves to reveal hidden fruits.            
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
 </section>
 
+<section class="section" style="width: 100%; margin: 0 auto;">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Fruit monitoring plays an important role in crop management, and rising global fruit consumption combined with labor shortages necessitates automated monitoring with robots.
+            However, occlusions from plant foliage often hinder accurate shape and pose estimation. 
+            Therefore, we propose an active fruit shape and pose estimation method that physically manipulates occluding leaves to reveal hidden fruits.  
+            This paper introduces a framework that plans robot actions to maximize visibility and minimize leaf damage. We developed a novel scene-consistent shape completion technique to improve fruit estimation under heavy occlusion and utilize a perception-driven deformation graph model to predict leaf deformation during planning.
+            Experiments on artificial and real sweet pepper plants demonstrate that our method enables robots to safely move leaves aside, exposing fruits for accurate shape and pose estimation, outperforming baseline methods.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Method. -->
+    <div class="columns is-centered has-text-centered" style="width: 100%; margin: 0 auto; justify-content: center;">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method</h2>
+        <div class="media-content">
+          <figure class="image">
+            <img src="./static/images/overview_figure_v5.png" alt="Method overview">
+            <figcaption class="subtitle has-text-centered">
+              Overview of the proposed active fruit shape and pose estimation system for plant-safe occlusion removal. 
+              Our system plans robot action that maximizes fruit visibility and minimizes plant damage risk.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+    <!--/ Method. -->
+
+    <!-- Results. -->
+    <div class="columns is-centered has-text-centered" style="width: 100%; margin: 0 auto; justify-content: center;">
+      <div class="column is-four-fifths">
+        <h2 class="title is-4">Shape Completion Visualization</h2>
+        
+        <div class="column">
+          <div class="content">
+            <h4 class="title is-6 has-text-centered">Proposed</h4>
+            <video id="dollyzoom" autoplay controls muted loop playsinline width="50%">
+              <source src="./static/videos/full_loss_with_free_space_x264.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+  
+        <div class="column">
+          <h4 class="title is-6 has-text-centered">Without Scene-Consistency</h4>
+          <div class="columns is-centered">
+            <div class="column content">
+              <video id="matting-video" controls playsinline width="50%">
+                <source src="./static/videos/only_surface_loss_with_free_space_x264.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/ Results. -->
+
+    <!-- Results. -->
+    <div class="columns is-centered has-text-centered" style="width: 100%; margin: 0 auto; justify-content: center;">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Results</h2>
+        <div class="content has-text-justified">
+          <p>
+            We tested 12 artificial plant scenarios, including two types of artificial leaves (small/large with thin/thick branches), three artificial peppers with varying shapes (circular and striped) and colors (red and yellow), and two different occlusion conditions. 
+            
+            We show our results in a list of 2x2 small figures. 
+            Left top: initial RGB image; right top: initial shape completion; left bottom: final RGB image; right bottom: final shape completion.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Results. -->
+
+    <!-- Paper video. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Paper video. -->
+  </div>
+</section>
 
 <!-- <section class="hero is-light is-small">
   <div class="hero-body">
@@ -265,42 +377,101 @@
   </div>
 </section> -->
 
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body" >
+      <h2 class="title is-3 has-text-centered">Unsafe actions</h2>
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/crop_test_obj_171_100_seq_best_001_x264.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">Hazard</h2>
+    </div>
+  </div>
+</section> -->
+
+<!-- <section class="hero teaser">
+<div class="container is-max-desktop" style="flex-wrap: nowrap;">
+  <div style="flex-basis: 30%; flex-grow: 0; box-sizing: border-box; flex-wrap: nowrap;">
+    <video controls autoplay muted loop style="width: 30%;">
+      <source src="./static/videos/crop_test_obj_211_100_seq_overlap_heuristic_999_x264.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div style="flex-basis: 30%; flex-grow: 0; box-sizing: border-box; flex-wrap: nowrap;">
+    <video controls autoplay muted loop style="width: 30%;">
+      <source src="./static/videos/crop_test_obj_220_100_seq_pure_random_collide_fruit_x264.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div style="flex-basis: 30%; flex-grow: 0; box-sizing: border-box; flex-wrap: nowrap;">
+    <video controls autoplay muted loop style="width: 30%;">
+      <source src="./static/videos/crop_test_obj_171_100_seq_best_001_x264.mp4" type="video/mp4">
+    </video>
+  </div>
+</div>
+</section>  -->
 
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Fruit monitoring plays an important role in crop management, and rising global fruit consumption combined with labor shortages necessitates automated monitoring with robots.
-            However, occlusions from plant foliage often hinder accurate shape and pose estimation. 
-            Therefore, we propose an active fruit shape and pose estimation method that physically manipulates occluding leaves to reveal hidden fruits.  
-            This paper introduces a framework that plans robot actions to maximize visibility and minimize leaf damage. We developed a novel scene-consistent shape completion technique to improve fruit estimation under heavy occlusion and utilize a perception-driven deformation graph model to predict leaf deformation during planning.
-            Experiments on artificial and real sweet pepper plants demonstrate that our method enables robots to safely move leaves aside, exposing fruits for accurate shape and pose estimation, outperforming baseline methods.
-          </p>
+    <h2 class="title is-3 has-text-centered">Unsafe Actions</h2>
+    <div class="content">
+      <h4 class="title is-6 has-text-centered">Here we illustrates three types of unsafe actions.</h4>        
+    </div>
+    
+    <div class="columns is-centered">
+
+      <div class="column">
+        <div class="content">
+          <h4 class="title is-5 has-text-centered">Hazard</h4>
+          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/crop_test_obj_211_100_seq_overlap_heuristic_999_x264.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="column">
+        <h4 class="title is-5 has-text-centered">Fruit Collision</h4>
+        <div class="columns is-centered">
+          <div class="column content">
+            <video id="matting-video" controls playsinline height="100%">
+              <source src="./static/videos/crop_test_obj_220_100_seq_pure_random_collide_fruit_x264.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="column">
+        <h4 class="title is-5 has-text-centered">Leaf Damage</h4>
+        <div class="columns is-centered">
+          <div class="column content">
+            <video id="matting-video" controls playsinline height="100%">
+              <source src="./static/videos/crop_test_obj_171_100_seq_best_001_x264.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
+  </div>
+</section> 
 
-    <!-- Paper video. -->
-    <!-- <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div> -->
-    <!--/ Paper video. -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="title is-3 has-text-centered">Multi-fruit scenario</h2>
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/pull_leaf_multi_fruits_speedup.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        Our system can scale to multi-fruit scenario and achieves maximum visibility for all fruits while preserving integrity of all leaves.
+        Video in 6x speed.
+      </h2>
+    </div>
   </div>
 </section>
-
-
-
 
 <footer class="footer">
   <div class="container">
