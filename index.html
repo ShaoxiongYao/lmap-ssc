@@ -136,7 +136,7 @@
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -144,9 +144,9 @@
                   </span>
                   <span>Paper</span>
                 </a>
-              </span>
+              </span> -->
               <span class="link-block">
-                <a href=""
+                <a href="https://arxiv.org/abs/2409.17389"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -161,19 +161,19 @@
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
                   </span>
-                  <span>Video</span>
+                  <span>Video (Coming soom)</span>
                 </a>
               </span>
               <!-- Code Link. -->
-              <!-- <span class="link-block">
-                <a href="https://github.com/google/nerfies"
+              <span class="link-block">
+                <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code</span>
+                  <span>Code (Coming soom)</span>
                   </a>
-              </span> -->
+              </span>
               <!-- Dataset Link. -->
               <!-- <span class="link-block">
                 <a href="https://github.com/google/nerfies/releases/tag/0.1"
@@ -263,12 +263,12 @@
     <div class="columns is-centered has-text-centered" style="width: 100%; margin: 0 auto; justify-content: center;">
       <div class="column is-four-fifths">
         <h2 class="title is-4">Shape Completion Visualization</h2>
-        
+        <div class="columns is-centered">
         <div class="column">
           <div class="content">
             <h4 class="title is-6 has-text-centered">Proposed</h4>
-            <video id="dollyzoom" autoplay controls muted loop playsinline width="50%">
-              <source src="./static/videos/full_loss_with_free_space_x264.mp4"
+            <video id="ssc-video" autoplay controls muted loop playsinline width="100%">
+              <source src="./static/videos/crop_test_obj_100_complete_process_full_loss_x264.mp4"
                       type="video/mp4">
             </video>
           </div>
@@ -278,13 +278,13 @@
           <h4 class="title is-6 has-text-centered">Without Scene-Consistency</h4>
           <div class="columns is-centered">
             <div class="column content">
-              <video id="matting-video" controls playsinline width="50%">
-                <source src="./static/videos/only_surface_loss_with_free_space_x264.mp4"
+              <video id="without-ssc-video" controls playsinline width="100%">
+                <source src="./static/videos/crop_test_obj_100_complete_process_only_surface_loss_x264.mp4"
                         type="video/mp4">
               </video>
             </div>
-  
           </div>
+        </div>
         </div>
       </div>
     </div>
