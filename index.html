@@ -32,7 +32,7 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
+  <link rel="icon" href="./static/images/leaf-icon.png">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -278,7 +278,7 @@
           <h4 class="title is-6 has-text-centered">Without Scene-Consistency</h4>
           <div class="columns is-centered">
             <div class="column content">
-              <video id="without-ssc-video" controls playsinline width="100%">
+              <video id="without-ssc-video" autoplay controls muted loop playsinline width="100%">
                 <source src="./static/videos/crop_test_obj_100_complete_process_only_surface_loss_x264.mp4"
                         type="video/mp4">
               </video>
@@ -298,7 +298,7 @@
         <div class="column">
           <div class="content">
             <h4 class="title is-6 has-text-centered">Low Energy Action</h4>
-            <video id="ssc-video" autoplay controls muted loop playsinline width="100%">
+            <video id="high-energy-action" autoplay controls muted loop playsinline width="100%">
               <source src="./static/videos/pull_artificial_100_grasp_04_move_04_x264.mp4"
                       type="video/mp4">
             </video>
@@ -309,7 +309,7 @@
           <h4 class="title is-6 has-text-centered">High Energy Action</h4>
           <div class="columns is-centered">
             <div class="column content">
-              <video id="without-ssc-video" controls playsinline width="100%">
+              <video id="low-energy-action" autoplay controls muted loop playsinline width="100%">
                 <source src="./static/videos/pull_artificial_100_grasp_00_move_01_x264.mp4"
                         type="video/mp4">
               </video>
@@ -453,7 +453,7 @@
       <div class="column">
         <div class="content">
           <h4 class="title is-5 has-text-centered">Hazard</h4>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+          <video id="hazard-video" autoplay controls muted loop playsinline height="100%">
             <source src="./static/videos/crop_test_obj_211_100_seq_overlap_heuristic_999_x264.mp4"
                     type="video/mp4">
           </video>
@@ -464,12 +464,11 @@
         <h4 class="title is-5 has-text-centered">Fruit Collision</h4>
         <div class="columns is-centered">
           <div class="column content">
-            <video id="matting-video" controls playsinline height="100%">
+            <video id="fruit-collision-video" autoplay controls muted loop playsinline height="100%">
               <source src="./static/videos/crop_test_obj_220_100_seq_pure_random_collide_fruit_x264.mp4"
                       type="video/mp4">
             </video>
           </div>
-
         </div>
       </div>
 
@@ -477,7 +476,7 @@
         <h4 class="title is-5 has-text-centered">Leaf Damage</h4>
         <div class="columns is-centered">
           <div class="column content">
-            <video id="matting-video" controls playsinline height="100%">
+            <video id="leaf-damage-video" autoplay controls muted loop playsinline height="100%">
               <source src="./static/videos/crop_test_obj_171_100_seq_best_001_x264.mp4"
                       type="video/mp4">
             </video>
